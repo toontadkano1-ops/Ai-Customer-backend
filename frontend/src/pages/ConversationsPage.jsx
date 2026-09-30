@@ -191,16 +191,16 @@ export const ConversationsPage = () => {
             </div>
 
             {/* Filter pills */}
-            <div className="flex items-center justify-between gap-1 text-[11px]">
+            <div className="flex items-center justify-between gap-1 text-xs sm:text-sm">
               <div className="flex items-center gap-1 overflow-x-auto">
                 {['all', 'active', 'escalated', 'closed'].map(st => (
                   <button
                     key={st}
                     onClick={() => setStatusFilter(st)}
-                    className={`px-2 py-0.5 rounded capitalize font-medium transition-colors ${
+                    className={`px-2.5 py-1 rounded-lg capitalize font-semibold transition-colors ${
                       statusFilter === st
                         ? 'bg-brand-600 text-white'
-                        : 'text-slate-400 hover:text-slate-200 bg-slate-800/80'
+                        : 'text-slate-300 hover:text-white bg-slate-800/80'
                     }`}
                   >
                     {st}
@@ -211,7 +211,7 @@ export const ConversationsPage = () => {
               <select
                 value={sentimentFilter}
                 onChange={(e) => setSentimentFilter(e.target.value)}
-                className="bg-slate-950 border border-slate-800 rounded px-2 py-0.5 text-[11px] text-slate-300 focus:outline-none"
+                className="bg-slate-950 border border-slate-800 rounded-lg px-2.5 py-1 text-xs sm:text-sm text-slate-200 focus:outline-none font-medium"
               >
                 <option value="all">All Sentiment</option>
                 <option value="positive">Positive</option>
@@ -224,7 +224,7 @@ export const ConversationsPage = () => {
           {/* Session List */}
           <div className="flex-1 overflow-y-auto divide-y divide-slate-800/60">
             {filteredConversations.length === 0 ? (
-              <div className="text-center py-12 text-slate-500 text-xs">
+              <div className="text-center py-12 text-slate-400 text-sm">
                 No matching customer interactions.
               </div>
             ) : (
@@ -241,15 +241,15 @@ export const ConversationsPage = () => {
                     }`}
                   >
                     <div className="flex items-center justify-between">
-                      <span className="text-sm font-semibold text-slate-200 truncate">
+                      <span className="text-sm sm:text-base font-bold text-slate-100 truncate">
                         {c.customer_name}
                       </span>
-                      <span className="text-[10px] text-slate-500 font-mono">
+                      <span className="text-xs text-slate-400 font-mono">
                         {new Date(c.updated_at).toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' })}
                       </span>
                     </div>
 
-                    <p className="text-xs text-slate-400 line-clamp-1">
+                    <p className="text-xs sm:text-sm text-slate-300 line-clamp-1">
                       {c.last_message || 'Session started'}
                     </p>
 
@@ -276,13 +276,13 @@ export const ConversationsPage = () => {
               {/* Transcript Header with Actions */}
               <div className="p-4 border-b border-slate-800 bg-dark-surface/90 flex flex-wrap items-center justify-between gap-3">
                 <div>
-                  <h3 className="text-sm font-bold text-white flex items-center gap-2">
+                  <h3 className="text-base sm:text-lg font-bold text-white flex items-center gap-2">
                     {selectedConversation.customer?.name}
-                    <span className="text-xs font-normal text-slate-400">({selectedConversation.customer?.email})</span>
+                    <span className="text-xs sm:text-sm font-normal text-slate-300">({selectedConversation.customer?.email})</span>
                   </h3>
-                  <p className="text-[11px] text-slate-400 mt-0.5">
-                    Session: <span className="font-mono text-slate-300">#{selectedConversation.id.slice(0, 8)}</span> • Status:{' '}
-                    <span className="capitalize text-brand-400 font-semibold">{selectedConversation.status}</span>
+                  <p className="text-xs sm:text-sm text-slate-300 mt-0.5">
+                    Session: <span className="font-mono text-slate-200 font-semibold">#{selectedConversation.id.slice(0, 8)}</span> • Status:{' '}
+                    <span className="capitalize text-brand-400 font-bold">{selectedConversation.status}</span>
                   </p>
                 </div>
 

@@ -161,14 +161,14 @@ export const KnowledgeBasePage = () => {
                 )}
               </div>
 
-              <h3 className="text-base font-bold text-white mb-2">{art.title}</h3>
-              <p className="text-xs text-slate-300 leading-relaxed line-clamp-4">
+              <h3 className="text-base sm:text-lg font-bold text-white mb-2">{art.title}</h3>
+              <p className="text-sm text-slate-200 leading-relaxed line-clamp-4">
                 {art.content}
               </p>
             </div>
 
             <div className="mt-5 pt-4 border-t border-slate-800 flex items-center justify-between">
-              <span className="text-[11px] text-slate-500 font-mono">
+              <span className="text-xs text-slate-400 font-mono font-medium">
                 Updated: {new Date(art.updated_at || art.created_at).toLocaleDateString()}
               </span>
 

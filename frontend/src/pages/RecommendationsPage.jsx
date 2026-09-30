@@ -183,8 +183,8 @@ export const RecommendationsPage = () => {
                   }`}
                 >
                   {isDeployed && (
-                    <div className="absolute top-0 right-0 bg-emerald-500 text-slate-950 font-bold text-[10px] px-3 py-0.5 rounded-bl-lg tracking-wider uppercase flex items-center gap-1">
-                      <span className="w-1.5 h-1.5 rounded-full bg-slate-950 animate-pulse" />
+                    <div className="absolute top-0 right-0 bg-emerald-500 text-slate-950 font-bold text-xs px-3 py-1 rounded-bl-xl tracking-wider uppercase flex items-center gap-1.5 shadow-md">
+                      <span className="w-2 h-2 rounded-full bg-slate-950 animate-pulse" />
                       Live in Production
                     </div>
                   )}
@@ -194,28 +194,28 @@ export const RecommendationsPage = () => {
                       <Badge variant={isDeployed ? 'success' : 'primary'} size="sm">
                         {rec.category}
                       </Badge>
-                      <span className="text-base font-bold text-emerald-400 font-mono">
+                      <span className="text-base sm:text-lg font-bold text-emerald-400 font-mono">
                         ${Number(rec.price).toFixed(2)}/mo
                       </span>
                     </div>
 
-                    <h3 className="text-lg font-bold text-white mb-2">{rec.name}</h3>
-                    <p className="text-xs text-slate-400 leading-relaxed mb-4">
+                    <h3 className="text-lg sm:text-xl font-bold text-white mb-2">{rec.name}</h3>
+                    <p className="text-xs sm:text-sm text-slate-300 leading-relaxed mb-4">
                       {rec.description}
                     </p>
 
                     {/* Explainability Callout */}
-                    <div className="p-3 rounded-xl bg-brand-950/40 border border-brand-500/20 text-xs space-y-1">
-                      <span className="font-semibold text-brand-300 flex items-center gap-1.5 text-[11px] uppercase tracking-wider">
-                        <Sparkles className="w-3.5 h-3.5 text-brand-400" /> Why Recommended:
+                    <div className="p-3.5 rounded-xl bg-brand-950/40 border border-brand-500/20 text-xs sm:text-sm space-y-1.5">
+                      <span className="font-bold text-brand-300 flex items-center gap-1.5 text-xs uppercase tracking-wider">
+                        <Sparkles className="w-4 h-4 text-brand-400" /> Why Recommended:
                       </span>
-                      <p className="text-slate-300 text-xs leading-normal">
+                      <p className="text-slate-200 text-xs sm:text-sm leading-relaxed">
                         {rec.reason}
                       </p>
                     </div>
 
                     {isDeployed && (
-                      <div className="mt-3 p-2.5 rounded-lg bg-emerald-500/10 border border-emerald-500/20 text-emerald-300 text-[11px] flex items-center justify-between">
+                      <div className="mt-3 p-3 rounded-xl bg-emerald-500/10 border border-emerald-500/20 text-emerald-300 text-xs sm:text-sm font-semibold flex items-center justify-between">
                         <span>Environment: <strong className="capitalize">{deployment.environment}</strong></span>
                         <span>Region: <strong>{deployment.region.toUpperCase()}</strong></span>
                       </div>
@@ -223,7 +223,7 @@ export const RecommendationsPage = () => {
                   </div>
 
                   <div className="mt-6 pt-4 border-t border-slate-800 flex items-center justify-between">
-                    <span className="text-[11px] text-slate-500">
+                    <span className="text-xs text-slate-400 font-medium">
                       {isDeployed ? 'Active Service' : 'Instant Provisioning'}
                     </span>
 
@@ -270,13 +270,13 @@ export const RecommendationsPage = () => {
             {/* Header */}
             <div className="flex items-start justify-between pb-4 border-b border-slate-800">
               <div>
-                <span className="text-[10px] font-mono text-brand-400 uppercase tracking-wider font-semibold">
+                <span className="text-xs font-mono text-brand-400 uppercase tracking-wider font-bold">
                   Enterprise Cloud Provisioning
                 </span>
-                <h3 className="text-lg font-bold text-white mt-0.5">
+                <h3 className="text-lg sm:text-xl font-bold text-white mt-0.5">
                   Deploy {deployModalProduct.name}
                 </h3>
-                <p className="text-xs text-slate-400">
+                <p className="text-xs sm:text-sm text-slate-300">
                   {deployModalProduct.category} • ${Number(deployModalProduct.price).toFixed(2)}/month
                 </p>
               </div>
@@ -302,17 +302,17 @@ export const RecommendationsPage = () => {
                       <Activity className="w-8 h-8 text-brand-400 animate-spin" />
                     )}
                   </div>
-                  <h4 className="text-sm font-bold text-white">
+                  <h4 className="text-sm sm:text-base font-bold text-white">
                     {deployStep === 4 ? 'Deployment Complete & Active!' : 'Executing Cloud Orchestration...'}
                   </h4>
-                  <p className="text-xs text-slate-400">
+                  <p className="text-xs sm:text-sm text-slate-300">
                     {deployStep === 4
                       ? 'Service mesh online with 99.99% monthly SLA guarantee.'
                       : 'Please wait while resources are allocated in the selected region.'}
                   </p>
                 </div>
 
-                <div className="space-y-3 p-4 rounded-xl bg-slate-900 border border-slate-800 text-xs">
+                <div className="space-y-3 p-4 rounded-xl bg-slate-900 border border-slate-800 text-xs sm:text-sm">
                   {deploymentSteps.map((step, idx) => {
                     const stepNum = idx + 1;
                     const isDone = deployStep > stepNum || deployStep === 4;
@@ -322,22 +322,22 @@ export const RecommendationsPage = () => {
                       <div key={idx} className="flex items-start gap-3">
                         <div className="mt-0.5">
                           {isDone ? (
-                            <span className="w-4 h-4 rounded-full bg-emerald-500/20 text-emerald-400 flex items-center justify-center font-bold text-[10px]">
+                            <span className="w-5 h-5 rounded-full bg-emerald-500/20 text-emerald-400 flex items-center justify-center font-bold text-xs">
                               ✓
                             </span>
                           ) : isCurrent ? (
-                            <span className="w-4 h-4 rounded-full border-2 border-brand-400 border-t-transparent animate-spin block" />
+                            <span className="w-5 h-5 rounded-full border-2 border-brand-400 border-t-transparent animate-spin block" />
                           ) : (
-                            <span className="w-4 h-4 rounded-full bg-slate-800 text-slate-500 flex items-center justify-center font-mono text-[10px]">
+                            <span className="w-5 h-5 rounded-full bg-slate-800 text-slate-400 flex items-center justify-center font-mono text-xs font-bold">
                               {stepNum}
                             </span>
                           )}
                         </div>
                         <div>
-                          <p className={`font-semibold ${isDone ? 'text-emerald-400' : isCurrent ? 'text-brand-300' : 'text-slate-500'}`}>
+                          <p className={`font-bold ${isDone ? 'text-emerald-400' : isCurrent ? 'text-brand-300' : 'text-slate-400'}`}>
                             {step.title}
                           </p>
-                          <p className="text-[11px] text-slate-400">{step.desc}</p>
+                          <p className="text-xs text-slate-400">{step.desc}</p>
                         </div>
                       </div>
                     );
@@ -382,14 +382,14 @@ export const RecommendationsPage = () => {
                         key={env.id}
                         type="button"
                         onClick={() => setDeployEnvironment(env.id)}
-                        className={`p-2.5 rounded-xl border text-left transition-all ${
+                        className={`p-3 rounded-xl border text-left transition-all ${
                           deployEnvironment === env.id
                             ? 'border-brand-500 bg-brand-500/10 text-white'
                             : 'border-slate-800 bg-slate-900 text-slate-400 hover:border-slate-700'
                         }`}
                       >
-                        <p className="font-bold text-xs">{env.label}</p>
-                        <p className="text-[10px] text-slate-400">{env.sub}</p>
+                        <p className="font-bold text-sm text-white">{env.label}</p>
+                        <p className="text-xs text-slate-400">{env.sub}</p>
                       </button>
                     ))}
                   </div>
@@ -398,13 +398,13 @@ export const RecommendationsPage = () => {
                 {/* Region */}
                 <div className="grid grid-cols-2 gap-3">
                   <div>
-                    <label className="block text-slate-300 font-semibold mb-1.5">
+                    <label className="block text-slate-200 text-sm font-semibold mb-1.5">
                       Cloud Region
                     </label>
                     <select
                       value={deployRegion}
                       onChange={(e) => setDeployRegion(e.target.value)}
-                      className="w-full bg-slate-900 border border-slate-800 rounded-lg px-3 py-2 text-slate-200 focus:outline-none focus:border-brand-500"
+                      className="w-full bg-slate-900 border border-slate-800 rounded-xl px-3.5 py-2.5 text-sm text-slate-200 focus:outline-none focus:border-brand-500 font-medium"
                     >
                       <option value="us-east">US-East (N. Virginia)</option>
                       <option value="eu-west">EU-West (Frankfurt)</option>
@@ -413,13 +413,13 @@ export const RecommendationsPage = () => {
                   </div>
 
                   <div>
-                    <label className="block text-slate-300 font-semibold mb-1.5">
+                    <label className="block text-slate-200 text-sm font-semibold mb-1.5">
                       Auto-scaling Policy
                     </label>
                     <select
                       value={deployScaling}
                       onChange={(e) => setDeployScaling(e.target.value)}
-                      className="w-full bg-slate-900 border border-slate-800 rounded-lg px-3 py-2 text-slate-200 focus:outline-none focus:border-brand-500"
+                      className="w-full bg-slate-900 border border-slate-800 rounded-xl px-3.5 py-2.5 text-sm text-slate-200 focus:outline-none focus:border-brand-500 font-medium"
                     >
                       <option value="dynamic">Dynamic Pod Burst (0-100 pods)</option>
                       <option value="predictive">Predictive Traffic Scaling</option>
@@ -429,19 +429,19 @@ export const RecommendationsPage = () => {
                 </div>
 
                 {/* Security Spec Notice */}
-                <div className="p-3 rounded-xl bg-slate-900 border border-slate-800 space-y-1">
-                  <div className="flex items-center gap-1.5 text-emerald-400 font-semibold text-xs">
-                    <Shield className="w-3.5 h-3.5" /> SOC 2 Type II & TLS 1.3 Strict Encryption
+                <div className="p-3.5 rounded-xl bg-slate-900 border border-slate-800 space-y-1.5">
+                  <div className="flex items-center gap-1.5 text-emerald-400 font-bold text-xs sm:text-sm">
+                    <Shield className="w-4 h-4" /> SOC 2 Type II & TLS 1.3 Strict Encryption
                   </div>
-                  <p className="text-[11px] text-slate-400">
+                  <p className="text-xs text-slate-300 leading-relaxed">
                     Compliant with HIPAA, GDPR, and ISO 27001 data isolation policies with dedicated VPC network peering.
                   </p>
                 </div>
 
                 {/* Footer Controls */}
                 <div className="flex items-center justify-between pt-2 border-t border-slate-800">
-                  <span className="text-xs text-slate-400">
-                    Monthly billing: <strong className="text-emerald-400 font-mono">${Number(deployModalProduct.price).toFixed(2)}</strong>
+                  <span className="text-xs sm:text-sm text-slate-300 font-medium">
+                    Monthly billing: <strong className="text-emerald-400 font-mono font-bold">${Number(deployModalProduct.price).toFixed(2)}</strong>
                   </span>
                   <div className="flex items-center gap-2">
                     <Button variant="secondary" onClick={() => setDeployModalProduct(null)}>

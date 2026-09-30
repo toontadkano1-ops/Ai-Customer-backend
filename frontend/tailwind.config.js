@@ -30,7 +30,20 @@ export default {
         }
       },
       fontFamily: {
-        sans: ['Inter', 'system-ui', '-apple-system', 'BlinkMacSystemFont', 'Segoe UI', 'Roboto', 'sans-serif'],
+        display: ['"Outfit"', '"Plus Jakarta Sans"', 'system-ui', 'sans-serif'],
+        sans: ['"Plus Jakarta Sans"', 'Inter', 'system-ui', '-apple-system', 'sans-serif'],
+        mono: ['"JetBrains Mono"', 'monospace'],
+      },
+      fontSize: {
+        '2xs': ['0.8125rem', { lineHeight: '1.2rem' }],   // ~13px
+        'xs': ['0.9375rem', { lineHeight: '1.4rem' }],     // 15px (comfortable medium-compact)
+        'sm': ['1.025rem', { lineHeight: '1.55rem' }],     // ~16.4px (standard readable body)
+        'base': ['1.125rem', { lineHeight: '1.75rem' }],   // 18px (prominent body)
+        'lg': ['1.25rem', { lineHeight: '1.85rem' }],      // 20px
+        'xl': ['1.45rem', { lineHeight: '2.05rem' }],      // 23px
+        '2xl': ['1.75rem', { lineHeight: '2.3rem' }],      // 28px
+        '3xl': ['2.25rem', { lineHeight: '2.65rem' }],     // 36px
+        '4xl': ['2.75rem', { lineHeight: '3.15rem' }],     // 44px
       },
       animation: {
         'pulse-subtle': 'pulse 3s cubic-bezier(0.4, 0, 0.6, 1) infinite',

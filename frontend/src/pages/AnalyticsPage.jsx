@@ -141,15 +141,15 @@ export const AnalyticsPage = () => {
               className="p-4 rounded-xl bg-slate-900/90 border border-slate-800 flex flex-col justify-between space-y-3"
             >
               <div>
-                <span className="text-[10px] font-mono text-brand-400 uppercase tracking-wider block mb-1">
+                <span className="text-xs font-mono text-brand-400 uppercase tracking-wider block mb-1 font-bold">
                   {item.type.replace('_', ' ')}
                 </span>
-                <h4 className="text-xs font-bold text-slate-100">{item.title}</h4>
-                <p className="text-xs text-slate-400 mt-1 leading-relaxed">{item.description}</p>
+                <h4 className="text-sm sm:text-base font-bold text-slate-100">{item.title}</h4>
+                <p className="text-xs sm:text-sm text-slate-300 mt-1 leading-relaxed">{item.description}</p>
               </div>
 
-              <div className="pt-2 border-t border-slate-800 text-[11px] text-amber-300 flex items-start gap-1.5">
-                <Lightbulb className="w-3.5 h-3.5 flex-shrink-0 mt-0.5 text-amber-400" />
+              <div className="pt-2 border-t border-slate-800 text-xs sm:text-sm text-amber-300 flex items-start gap-1.5 font-medium">
+                <Lightbulb className="w-4 h-4 flex-shrink-0 mt-0.5 text-amber-400" />
                 <span>Tip: {item.actionable_tip}</span>
               </div>
             </div>
@@ -161,8 +161,8 @@ export const AnalyticsPage = () => {
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
         {/* Support Category Breakdown Bar Chart */}
         <div className="rounded-2xl border border-slate-800 bg-slate-900/60 p-6 backdrop-blur-md">
-          <h3 className="text-sm font-bold text-white mb-1">Support Category Volume</h3>
-          <p className="text-xs text-slate-400 mb-4">Ticket count per operational category</p>
+          <h3 className="text-base sm:text-lg font-bold text-white mb-1">Support Category Volume</h3>
+          <p className="text-xs sm:text-sm text-slate-300 mb-4">Ticket count per operational category</p>
 
           <div className="h-60 w-full">
             <ResponsiveContainer width="100%" height="100%">

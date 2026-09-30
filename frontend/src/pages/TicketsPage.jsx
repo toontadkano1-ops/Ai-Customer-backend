@@ -290,7 +290,7 @@ export const TicketsPage = () => {
         <div className="overflow-x-auto">
           <table className="w-full text-left border-collapse">
             <thead>
-              <tr className="border-b border-slate-800 bg-slate-900/80 text-[11px] font-semibold text-slate-400 uppercase tracking-wider">
+              <tr className="border-b border-slate-800 bg-slate-900/80 text-xs font-bold text-slate-300 uppercase tracking-wider">
                 <th className="py-3 px-4">Ticket Subject</th>
                 <th className="py-3 px-4">Customer</th>
                 <th className="py-3 px-4">Priority</th>
@@ -299,7 +299,7 @@ export const TicketsPage = () => {
                 <th className="py-3 px-4 text-right">Actions</th>
               </tr>
             </thead>
-            <tbody className="divide-y divide-slate-800/60 text-xs">
+            <tbody className="divide-y divide-slate-800/60 text-sm">
               {filteredTickets.length === 0 ? (
                 <tr>
                   <td colSpan={6} className="py-8 text-center text-slate-500">
@@ -319,7 +319,7 @@ export const TicketsPage = () => {
                       <div className="font-semibold text-slate-100 hover:text-brand-400 transition-colors line-clamp-1">
                         {t.subject}
                       </div>
-                      <div className="text-[11px] text-slate-400 font-mono mt-0.5">
+                      <div className="text-xs text-slate-400 font-mono mt-0.5">
                         #{t.id.slice(0, 8)} • <span className="text-slate-300 font-sans">{t.category}</span>
                       </div>
                     </td>
@@ -367,7 +367,7 @@ export const TicketsPage = () => {
                             e.stopPropagation();
                             handleStatusChange(t.id, 'resolved');
                           }}
-                          className="px-2.5 py-1 rounded bg-emerald-500/10 hover:bg-emerald-500/20 text-emerald-400 border border-emerald-500/20 text-[11px] font-medium transition-colors"
+                          className="px-3 py-1.5 rounded-lg bg-emerald-500/15 hover:bg-emerald-500/25 text-emerald-400 border border-emerald-500/20 text-xs font-semibold transition-colors"
                           title="Mark resolved"
                         >
                           ✓ Resolve
@@ -375,7 +375,7 @@ export const TicketsPage = () => {
                       )}
                       <button
                         onClick={() => openTicketDetail(t.id)}
-                        className="px-2.5 py-1 rounded bg-slate-800 hover:bg-slate-700 text-slate-300 text-[11px] font-medium transition-colors"
+                        className="px-3 py-1.5 rounded-lg bg-slate-800 hover:bg-slate-700 text-slate-200 text-xs font-semibold transition-colors"
                       >
                         View Thread →
                       </button>
@@ -449,7 +449,7 @@ export const TicketsPage = () => {
               {(selectedTicket.messages || []).map((msg) => (
                 <div
                   key={msg.id}
-                  className={`p-4 rounded-xl text-xs space-y-1.5 ${
+                  className={`p-4 rounded-xl text-sm space-y-1.5 ${
                     msg.is_internal
                       ? 'bg-amber-950/20 border border-amber-500/30 text-amber-200'
                       : msg.sender_type === 'customer'
@@ -457,13 +457,13 @@ export const TicketsPage = () => {
                       : 'bg-brand-950/20 border border-brand-500/30 text-slate-100'
                   }`}
                 >
-                  <div className="flex items-center justify-between text-[11px] font-semibold">
+                  <div className="flex items-center justify-between text-xs font-bold">
                     <span className="flex items-center gap-1.5">
-                      {msg.is_internal && <Lock className="w-3 h-3 text-amber-400" />}
+                      {msg.is_internal && <Lock className="w-3.5 h-3.5 text-amber-400" />}
                       {msg.sender_name}
                       {msg.is_internal && <span className="text-amber-400 font-normal">[Internal Note]</span>}
                     </span>
-                    <span className="text-slate-500 font-mono">
+                    <span className="text-slate-400 font-mono">
                       {new Date(msg.created_at).toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' })}
                     </span>
                   </div>
@@ -475,7 +475,7 @@ export const TicketsPage = () => {
             {/* Reply Input Box */}
             <form onSubmit={handleSendReply} className="p-4 border-t border-slate-800 bg-slate-900/80 space-y-3">
               {!isCustomer && (
-                <div className="flex items-center gap-4 text-xs">
+                <div className="flex items-center gap-4 text-xs sm:text-sm">
                   <label className="flex items-center gap-1.5 cursor-pointer text-slate-300">
                     <input
                       type="radio"

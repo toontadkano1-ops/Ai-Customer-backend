@@ -33,7 +33,7 @@ export const SentimentIndicator = ({ sentiment = 'neutral', confidence, showEsca
         <Icon className="w-3.5 h-3.5" />
         <span className="capitalize">{current.label}</span>
         {confidence !== undefined && (
-          <span className="opacity-75 font-mono text-[10px]">
+          <span className="opacity-80 font-mono text-xs font-bold">
             {Math.round(confidence * 100)}%
           </span>
         )}

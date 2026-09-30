@@ -85,11 +85,11 @@ export const SettingsPage = () => {
             </div>
 
             <div>
-              <div className="flex justify-between items-center mb-1">
-                <label className="text-xs font-medium text-slate-300">
-                  Knowledge Grounding Confidence Threshold: <span className="font-mono text-brand-400">{threshold}</span>
+              <div className="flex justify-between items-center mb-1.5">
+                <label className="text-sm font-semibold text-slate-200">
+                  Knowledge Grounding Confidence Threshold: <span className="font-mono text-brand-400 font-bold">{threshold}</span>
                 </label>
-                <span className="text-[11px] text-slate-500">Uncertainty triggered below this score</span>
+                <span className="text-xs sm:text-sm text-slate-400 font-medium">Uncertainty triggered below this score</span>
               </div>
               <input
                 type="range"
@@ -98,9 +98,9 @@ export const SettingsPage = () => {
                 step="0.05"
                 value={threshold}
                 onChange={(e) => setThreshold(parseFloat(e.target.value))}
-                className="w-full accent-brand-500 cursor-pointer"
+                className="w-full accent-brand-500 cursor-pointer h-2 bg-slate-800 rounded-lg"
               />
-              <div className="flex justify-between text-[10px] text-slate-500 mt-1 font-mono">
+              <div className="flex justify-between text-xs text-slate-400 mt-1.5 font-mono font-medium">
                 <span>0.40 (Permissive)</span>
                 <span>0.65 (Recommended)</span>
                 <span>0.90 (Strict)</span>

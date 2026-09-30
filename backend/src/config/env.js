@@ -14,7 +14,7 @@ export const config = {
   },
   ai: {
     provider: process.env.AI_PROVIDER || 'gemini-3.8',
-    geminiApiKey: process.env.GEMINI_API_KEY || '',
+    geminiApiKey: process.env.GEMINI_API_KEY || process.env.GOOGLE_API_KEY || '',
     openaiApiKey: process.env.OPENAI_API_KEY || '',
     modelName: process.env.AI_MODEL_NAME || 'gemini-3.8-flash',
     confidenceThreshold: parseFloat(process.env.CONFIDENCE_THRESHOLD || '0.65'),
