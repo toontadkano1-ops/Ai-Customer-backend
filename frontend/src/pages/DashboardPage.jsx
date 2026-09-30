@@ -80,17 +80,17 @@ export const DashboardPage = () => {
   };
 
   return (
-    <div className="space-y-6 animate-fade-in">
+    <div className="space-y-6 animate-fadeIn">
       {/* High-Tech Welcome Hero with Live Telemetry */}
-      <div className="relative overflow-hidden rounded-3xl p-6 sm:p-8 border border-slate-800/80 bg-gradient-to-br from-slate-900 via-slate-900/90 to-slate-950 backdrop-blur-xl shadow-2xl">
-        <div className="absolute top-0 right-0 w-96 h-96 bg-brand-500/10 rounded-full blur-3xl pointer-events-none -mr-20 -mt-20"></div>
-        <div className="absolute bottom-0 left-1/3 w-64 h-64 bg-emerald-500/5 rounded-full blur-3xl pointer-events-none"></div>
+      <div className="relative overflow-hidden rounded-3xl p-6 sm:p-8 border border-[#1C2242] bg-gradient-to-br from-[#0E1128] via-[#090B1B] to-[#060712] backdrop-blur-2xl shadow-2xl">
+        <div className="absolute top-0 right-0 w-96 h-96 bg-violet-600/15 rounded-full blur-[120px] pointer-events-none -mr-20 -mt-20"></div>
+        <div className="absolute bottom-0 left-1/3 w-64 h-64 bg-indigo-600/10 rounded-full blur-[100px] pointer-events-none"></div>
 
         <div className="relative z-10 flex flex-col lg:flex-row lg:items-center justify-between gap-6">
           <div>
-            <div className="flex items-center gap-2 mb-2.5">
-              <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs sm:text-sm font-bold bg-brand-500/20 text-brand-300 border border-brand-500/30">
-                <Sparkles className="w-4 h-4 text-amber-300" />
+            <div className="flex flex-wrap items-center gap-2 mb-3">
+              <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs sm:text-sm font-bold bg-violet-500/15 text-violet-300 border border-violet-500/30">
+                <Sparkles className="w-4 h-4 text-violet-400" />
                 Gemini 3.8 Flash Hybrid Engine Active
               </span>
               <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs sm:text-sm font-bold bg-emerald-500/15 text-emerald-300 border border-emerald-500/30">
@@ -99,8 +99,8 @@ export const DashboardPage = () => {
               </span>
             </div>
 
-            <h1 className="text-2xl sm:text-3xl lg:text-4xl font-extrabold text-white tracking-tight">
-              Welcome back, <span className="bg-gradient-to-r from-white via-slate-200 to-brand-300 bg-clip-text text-transparent">{user?.full_name || 'Team Member'}</span>!
+            <h1 className="text-2xl sm:text-3xl lg:text-4xl font-extrabold text-white tracking-tight font-display">
+              Welcome back, <span className="bg-gradient-to-r from-white via-violet-200 to-violet-400 bg-clip-text text-transparent">{user?.full_name || 'Team Member'}</span>!
             </h1>
             <p className="text-sm sm:text-base text-slate-300 mt-2 max-w-2xl leading-relaxed">
               Real-time customer experience intelligence, autonomous AI resolutions, and high-priority support escalation metrics.
@@ -110,7 +110,7 @@ export const DashboardPage = () => {
             <div className="flex flex-wrap items-center gap-3 mt-6">
               <button
                 onClick={handleLaunchLiveChat}
-                className="flex items-center gap-2 px-4 py-2.5 rounded-xl bg-gradient-to-r from-emerald-600 to-teal-600 hover:from-emerald-500 hover:to-teal-500 text-white text-xs sm:text-sm font-bold shadow-lg shadow-emerald-600/25 hover:scale-105 active:scale-95 transition-all"
+                className="flex items-center gap-2 px-4 py-2.5 rounded-xl bg-gradient-to-r from-violet-600 via-purple-600 to-indigo-600 hover:from-violet-500 hover:via-purple-500 hover:to-indigo-500 text-white text-xs sm:text-sm font-bold shadow-lg shadow-violet-900/30 hover:scale-105 active:scale-95 transition-all"
               >
                 <MessageSquare className="w-4 h-4" />
                 <span>Launch Customer Live Chat</span>
@@ -118,7 +118,7 @@ export const DashboardPage = () => {
 
               <Link
                 to="/tickets"
-                className="flex items-center gap-2 px-4 py-2.5 rounded-xl bg-slate-800/80 hover:bg-slate-700/80 border border-slate-700 text-slate-100 text-xs sm:text-sm font-semibold hover:scale-105 transition-all"
+                className="flex items-center gap-2 px-4 py-2.5 rounded-xl bg-[#0D0F22]/90 hover:bg-[#141836] border border-[#1C2242] text-slate-100 text-xs sm:text-sm font-semibold hover:scale-105 transition-all shadow-sm"
               >
                 <Ticket className="w-4 h-4 text-amber-400" />
                 <span>Support Tickets ({overview?.openTickets || 0})</span>
@@ -126,15 +126,15 @@ export const DashboardPage = () => {
 
               <Link
                 to="/recommendations"
-                className="flex items-center gap-2 px-4 py-2.5 rounded-xl bg-slate-800/80 hover:bg-slate-700/80 border border-slate-700 text-slate-100 text-xs sm:text-sm font-semibold hover:scale-105 transition-all"
+                className="flex items-center gap-2 px-4 py-2.5 rounded-xl bg-[#0D0F22]/90 hover:bg-[#141836] border border-[#1C2242] text-slate-100 text-xs sm:text-sm font-semibold hover:scale-105 transition-all shadow-sm"
               >
-                <Layers className="w-4 h-4 text-brand-400" />
+                <Layers className="w-4 h-4 text-violet-400" />
                 <span>Deploy Solutions</span>
               </Link>
 
               <Link
                 to="/knowledge"
-                className="flex items-center gap-2 px-4 py-2.5 rounded-xl bg-slate-800/80 hover:bg-slate-700/80 border border-slate-700 text-slate-100 text-xs sm:text-sm font-semibold hover:scale-105 transition-all"
+                className="flex items-center gap-2 px-4 py-2.5 rounded-xl bg-[#0D0F22]/90 hover:bg-[#141836] border border-[#1C2242] text-slate-100 text-xs sm:text-sm font-semibold hover:scale-105 transition-all shadow-sm"
               >
                 <Database className="w-4 h-4 text-cyan-400" />
                 <span>Knowledge Base</span>
@@ -143,15 +143,15 @@ export const DashboardPage = () => {
           </div>
 
           {/* Date Filter selector */}
-          <div className="flex items-center gap-1.5 bg-slate-950/80 border border-slate-800 p-2 rounded-2xl self-start lg:self-center shadow-inner">
+          <div className="flex items-center gap-1.5 bg-[#070814]/90 border border-[#1C2242] p-1.5 rounded-2xl self-start lg:self-center shadow-inner">
             {['7d', '30d', '90d'].map((r) => (
               <button
                 key={r}
                 onClick={() => setRange(r)}
                 className={`px-3.5 py-1.5 text-xs sm:text-sm rounded-xl font-bold transition-all ${
                   range === r
-                    ? 'bg-brand-600 text-white shadow-md shadow-brand-500/25'
-                    : 'text-slate-300 hover:text-white hover:bg-slate-800/60'
+                    ? 'bg-gradient-to-r from-violet-600 to-indigo-600 text-white shadow-md shadow-violet-900/30'
+                    : 'text-slate-300 hover:text-white hover:bg-[#141836]'
                 }`}
               >
                 Last {r.toUpperCase()}
@@ -208,18 +208,18 @@ export const DashboardPage = () => {
       {/* Visual Analytics Grid: Engagement Trends & Sentiment Breakdown */}
       <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">
         {/* Engagement Trend Chart (2 columns) */}
-        <div className="lg:col-span-2 rounded-3xl border border-slate-800/80 bg-slate-900/60 p-6 backdrop-blur-md shadow-xl">
+        <div className="lg:col-span-2 rounded-3xl border border-[#1C2242] bg-[#0D0F22]/90 p-6 backdrop-blur-xl shadow-xl">
           <div className="flex items-center justify-between mb-4">
             <div>
-              <h2 className="text-base sm:text-lg font-bold text-white flex items-center gap-2">
-                <Activity className="w-5 h-5 text-brand-400" />
+              <h2 className="text-base sm:text-lg font-bold text-white flex items-center gap-2 font-display">
+                <Activity className="w-5 h-5 text-violet-400" />
                 Customer Interaction & AI Resolution Trends
               </h2>
               <p className="text-xs sm:text-sm text-slate-300 mt-1">Daily inquiry traffic vs autonomous AI grounding answers</p>
             </div>
             <div className="flex items-center gap-3 text-xs sm:text-sm">
               <span className="flex items-center gap-1.5 text-slate-300 font-semibold">
-                <span className="w-3 h-3 rounded-full bg-brand-500" /> Total Inquiries
+                <span className="w-3 h-3 rounded-full bg-violet-500" /> Total Inquiries
               </span>
               <span className="flex items-center gap-1.5 text-slate-300 font-semibold">
                 <span className="w-3 h-3 rounded-full bg-emerald-400" /> AI Resolved
@@ -232,11 +232,11 @@ export const DashboardPage = () => {
               <AreaChart data={trends} margin={{ top: 10, right: 10, left: -15, bottom: 0 }}>
                 <defs>
                   <linearGradient id="colorConv" x1="0" y1="0" x2="0" y2="1">
-                    <stop offset="5%" stopColor="#6366F1" stopOpacity={0.4} />
-                    <stop offset="95%" stopColor="#6366F1" stopOpacity={0} />
+                    <stop offset="5%" stopColor="#8B5CF6" stopOpacity={0.45} />
+                    <stop offset="95%" stopColor="#8B5CF6" stopOpacity={0} />
                   </linearGradient>
                   <linearGradient id="colorRes" x1="0" y1="0" x2="0" y2="1">
-                    <stop offset="5%" stopColor="#10B981" stopOpacity={0.4} />
+                    <stop offset="5%" stopColor="#10B981" stopOpacity={0.45} />
                     <stop offset="95%" stopColor="#10B981" stopOpacity={0} />
                   </linearGradient>
                 </defs>
@@ -244,15 +244,15 @@ export const DashboardPage = () => {
                 <YAxis stroke="#64748B" fontSize={13} tickLine={false} />
                 <Tooltip
                   contentStyle={{
-                    backgroundColor: '#0F172A',
-                    borderColor: '#1E293B',
+                    backgroundColor: '#090B1B',
+                    borderColor: '#1C2242',
                     borderRadius: '0.75rem',
                     color: '#F8FAFC',
                     fontSize: '13px',
-                    boxShadow: '0 10px 25px -5px rgba(0, 0, 0, 0.5)'
+                    boxShadow: '0 10px 25px -5px rgba(0, 0, 0, 0.6)'
                   }}
                 />
-                <Area type="monotone" dataKey="conversations" stroke="#6366F1" strokeWidth={2.5} fillOpacity={1} fill="url(#colorConv)" name="Total Inquiries" />
+                <Area type="monotone" dataKey="conversations" stroke="#8B5CF6" strokeWidth={2.5} fillOpacity={1} fill="url(#colorConv)" name="Total Inquiries" />
                 <Area type="monotone" dataKey="aiResolved" stroke="#10B981" strokeWidth={2.5} fillOpacity={1} fill="url(#colorRes)" name="AI Resolved" />
               </AreaChart>
             </ResponsiveContainer>
@@ -260,10 +260,10 @@ export const DashboardPage = () => {
         </div>
 
         {/* Sentiment Health Breakdown (1 column) */}
-        <div className="rounded-3xl border border-slate-800/80 bg-slate-900/60 p-6 backdrop-blur-md shadow-xl flex flex-col justify-between">
+        <div className="rounded-3xl border border-[#1C2242] bg-[#0D0F22]/90 p-6 backdrop-blur-xl shadow-xl flex flex-col justify-between">
           <div>
             <div className="flex items-center justify-between mb-2">
-              <h2 className="text-base sm:text-lg font-bold text-white flex items-center gap-2">
+              <h2 className="text-base sm:text-lg font-bold text-white flex items-center gap-2 font-display">
                 <Sparkles className="w-5 h-5 text-emerald-400" />
                 Sentiment Intelligence
               </h2>
@@ -293,8 +293,8 @@ export const DashboardPage = () => {
                   </Pie>
                   <Tooltip
                     contentStyle={{
-                      backgroundColor: '#0F172A',
-                      borderColor: '#1E293B',
+                      backgroundColor: '#090B1B',
+                      borderColor: '#1C2242',
                       borderRadius: '0.5rem',
                       color: '#F8FAFC',
                       fontSize: '13px'
@@ -305,7 +305,7 @@ export const DashboardPage = () => {
             </div>
           </div>
 
-          <div className="space-y-2.5 pt-3 border-t border-slate-800">
+          <div className="space-y-2.5 pt-3 border-t border-[#1C2242]">
             {(sentiment?.distribution || []).map((item) => (
               <div key={item.name} className="flex items-center justify-between text-xs sm:text-sm">
                 <span className="flex items-center gap-2 text-slate-200 font-semibold">
@@ -324,10 +324,10 @@ export const DashboardPage = () => {
       {/* Recent High Priority Support Tickets & Common Categories */}
       <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">
         {/* Support Tickets Queue Preview */}
-        <div className="lg:col-span-2 rounded-3xl border border-slate-800/80 bg-slate-900/60 p-6 backdrop-blur-md shadow-xl">
+        <div className="lg:col-span-2 rounded-3xl border border-[#1C2242] bg-[#0D0F22]/90 p-6 backdrop-blur-xl shadow-xl">
           <div className="flex items-center justify-between mb-4">
             <div>
-              <h2 className="text-base sm:text-lg font-bold text-white flex items-center gap-2">
+              <h2 className="text-base sm:text-lg font-bold text-white flex items-center gap-2 font-display">
                 <Ticket className="w-5 h-5 text-amber-400" />
                 Active Support Tickets
               </h2>
@@ -347,7 +347,7 @@ export const DashboardPage = () => {
               recentTickets.map((t) => (
                 <div
                   key={t.id}
-                  className="p-4 sm:p-5 rounded-2xl bg-slate-900/90 border border-slate-800 hover:border-slate-700 transition-all card-hover flex items-center justify-between gap-4"
+                  className="p-4 sm:p-5 rounded-2xl bg-[#090B1B] border border-[#1C2242] hover:border-violet-500/40 transition-all card-hover flex items-center justify-between gap-4"
                 >
                   <div className="min-w-0 flex-1">
                     <div className="flex items-center gap-2 mb-1.5">
@@ -369,7 +369,7 @@ export const DashboardPage = () => {
                     <p className="text-base font-bold text-white truncate">{t.subject}</p>
                     <p className="text-xs sm:text-sm text-slate-300 mt-1.5 truncate">
                       Customer: <span className="text-slate-100 font-semibold">{t.customer_name}</span> | Agent:{' '}
-                      <span className="text-brand-300 font-semibold">{t.assigned_agent_name}</span>
+                      <span className="text-violet-300 font-semibold">{t.assigned_agent_name}</span>
                     </p>
                   </div>
 
@@ -385,9 +385,9 @@ export const DashboardPage = () => {
         </div>
 
         {/* Support Category Distribution */}
-        <div className="rounded-3xl border border-slate-800/80 bg-slate-900/60 p-6 backdrop-blur-md shadow-xl flex flex-col justify-between">
+        <div className="rounded-3xl border border-[#1C2242] bg-[#0D0F22]/90 p-6 backdrop-blur-xl shadow-xl flex flex-col justify-between">
           <div>
-            <h2 className="text-base sm:text-lg font-bold text-white mb-1 flex items-center gap-2">
+            <h2 className="text-base sm:text-lg font-bold text-white mb-1 flex items-center gap-2 font-display">
               <Layers className="w-5 h-5 text-cyan-400" />
               Inquiry Categories
             </h2>
@@ -400,9 +400,9 @@ export const DashboardPage = () => {
                     <span className="text-slate-200 font-semibold">{cat.category}</span>
                     <span className="text-slate-300 font-mono font-bold">{cat.count} tickets</span>
                   </div>
-                  <div className="w-full bg-slate-800 rounded-full h-2.5 overflow-hidden p-0.5">
+                  <div className="w-full bg-[#070814] rounded-full h-2.5 overflow-hidden p-0.5 border border-[#1C2242]">
                     <div
-                      className="bg-gradient-to-r from-brand-500 to-indigo-500 h-1.5 rounded-full"
+                      className="bg-gradient-to-r from-violet-600 via-purple-600 to-indigo-600 h-1.5 rounded-full"
                       style={{
                         width: `${Math.min((cat.count / Math.max(supportData?.totalTickets || 1, 1)) * 100, 100)}%`
                       }}
@@ -413,7 +413,7 @@ export const DashboardPage = () => {
             </div>
           </div>
 
-          <div className="pt-4 border-t border-slate-800 mt-4 flex items-center justify-between text-xs sm:text-sm text-slate-300 font-medium">
+          <div className="pt-4 border-t border-[#1C2242] mt-4 flex items-center justify-between text-xs sm:text-sm text-slate-300 font-medium">
             <span>Total Logged Tickets:</span>
             <span className="font-extrabold text-white font-mono text-base">{supportData?.totalTickets || 0}</span>
           </div>
