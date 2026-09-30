@@ -72,10 +72,10 @@ export const ChatAssistantPage = () => {
               </span>
             </div>
 
-            <h1 className="text-2xl sm:text-3xl font-extrabold text-white tracking-tight font-display">
+            <h1 className="text-xl sm:text-2xl font-bold text-white tracking-tight">
               Customer Live AI Concierge
             </h1>
-            <p className="text-sm sm:text-base text-slate-300 mt-1.5 max-w-2xl leading-relaxed">
+            <p className="text-xs sm:text-sm text-slate-300 mt-1 max-w-2xl leading-relaxed">
               Real-time conversational assistant grounded in enterprise knowledge documents, verified SLAs, and autonomous ticket escalation.
             </p>
           </div>

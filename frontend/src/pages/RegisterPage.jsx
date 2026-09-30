@@ -146,13 +146,13 @@ export const RegisterPage = () => {
           <CXLogo size="lg" subtitle="Enterprise AI Platform" />
 
           <div>
-            <h1 className="text-3xl sm:text-4xl font-extrabold text-white tracking-tight leading-tight font-display">
+            <h1 className="text-2xl sm:text-3xl font-bold text-white tracking-tight leading-snug">
               Create your account & experience{' '}
               <span className="text-transparent bg-clip-text bg-gradient-to-r from-violet-400 via-purple-300 to-indigo-300">
                 Enterprise AI
               </span>
             </h1>
-            <p className="text-base text-slate-300 mt-3 leading-relaxed">
+            <p className="text-xs sm:text-sm text-slate-300 mt-2.5 leading-relaxed">
               Deploy autonomous AI support, grounded knowledge concierges, and multi-tenant customer intelligence in minutes.
             </p>
           </div>

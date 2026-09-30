@@ -8,17 +8,17 @@ export const StatCard = ({ title, value, change, isPositive, icon: Icon, descrip
       
       {/* Top row */}
       <div className="flex items-center justify-between">
-        <p className="text-xs sm:text-sm font-bold uppercase tracking-wider text-slate-300 font-display">{title}</p>
+        <p className="text-xs font-semibold uppercase tracking-wider text-slate-400">{title}</p>
         {Icon && (
-          <div className="flex h-11 w-11 items-center justify-center rounded-xl bg-violet-500/10 text-violet-300 border border-violet-500/20 group-hover:scale-110 group-hover:border-violet-500/40 group-hover:bg-violet-500/20 transition-all duration-200">
+          <div className="flex h-10 w-10 items-center justify-center rounded-xl bg-violet-500/10 text-violet-300 border border-violet-500/20 group-hover:scale-105 group-hover:border-violet-500/40 group-hover:bg-violet-500/20 transition-all duration-200">
             <Icon className="h-5 w-5" />
           </div>
         )}
       </div>
 
       {/* Main Metric Value */}
-      <div className="mt-3.5 flex items-baseline gap-3">
-        <p className="text-3xl sm:text-4xl font-extrabold tracking-tight text-white font-display tabular-nums">
+      <div className="mt-3 flex items-baseline gap-3">
+        <p className="text-2xl sm:text-3xl font-bold tracking-tight text-white tabular-nums">
           {value}
         </p>
         {change !== undefined && (
@@ -36,7 +36,7 @@ export const StatCard = ({ title, value, change, isPositive, icon: Icon, descrip
 
       {/* Subtitle / Description */}
       {(description || trendLabel) && (
-        <p className="mt-2 text-xs sm:text-sm text-slate-300 font-medium leading-relaxed">
+        <p className="mt-2 text-xs text-slate-400 font-normal leading-relaxed">
           {description || trendLabel}
         </p>
       )}

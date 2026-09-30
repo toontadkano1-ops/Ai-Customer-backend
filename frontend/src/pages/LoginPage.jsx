@@ -226,13 +226,13 @@ export const LoginPage = () => {
 
             {/* Editorial Brand Narrative */}
             <div className="mt-8 text-center xl:text-left">
-              <h2 className="text-2xl sm:text-3xl xl:text-4xl font-extrabold text-white tracking-tight leading-tight font-display">
+              <h2 className="text-xl sm:text-2xl xl:text-3xl font-bold text-white tracking-tight leading-snug">
                 Intelligence Behind Every{' '}
                 <span className="text-transparent bg-clip-text bg-gradient-to-r from-violet-400 via-purple-300 to-indigo-300">
                   Customer Interaction.
                 </span>
               </h2>
-              <p className="mt-3 text-slate-300 text-sm xl:text-base leading-relaxed max-w-xl">
+              <p className="mt-2.5 text-slate-300 text-xs sm:text-sm leading-relaxed max-w-xl">
                 Transform customer conversations into meaningful experiences with AI-powered insights, intelligent automation, and personalized engagement.
               </p>
             </div>
@@ -277,10 +277,10 @@ export const LoginPage = () => {
 
           {/* Heading */}
           <div className="mb-6 text-center sm:text-left">
-            <h1 className="text-2xl sm:text-3xl font-extrabold text-white tracking-tight font-display">
+            <h1 className="text-xl sm:text-2xl font-bold text-white tracking-tight">
               Welcome back
             </h1>
-            <p className="text-sm text-slate-400 mt-1.5 leading-relaxed">
+            <p className="text-xs sm:text-sm text-slate-400 mt-1 leading-relaxed">
               Sign in to your enterprise workspace or select a quick demo role.
             </p>
           </div>

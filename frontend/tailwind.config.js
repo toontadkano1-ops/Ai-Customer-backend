@@ -30,20 +30,21 @@ export default {
         }
       },
       fontFamily: {
-        display: ['"Outfit"', '"Plus Jakarta Sans"', 'system-ui', 'sans-serif'],
-        sans: ['"Plus Jakarta Sans"', 'Inter', 'system-ui', '-apple-system', 'sans-serif'],
+        display: ['"Inter"', 'system-ui', '-apple-system', 'BlinkMacSystemFont', '"Segoe UI"', 'Roboto', 'sans-serif'],
+        sans: ['"Inter"', 'system-ui', '-apple-system', 'BlinkMacSystemFont', '"Segoe UI"', 'Roboto', 'sans-serif'],
         mono: ['"JetBrains Mono"', 'monospace'],
       },
       fontSize: {
-        '2xs': ['0.6875rem', { lineHeight: '0.95rem' }], // 11px
-        'xs': ['0.75rem', { lineHeight: '1rem' }],        // 12px
-        'sm': ['0.875rem', { lineHeight: '1.25rem' }],    // 14px
-        'base': ['0.9375rem', { lineHeight: '1.4rem' }],   // 15px
-        'lg': ['1.0625rem', { lineHeight: '1.55rem' }],   // 17px
-        'xl': ['1.25rem', { lineHeight: '1.75rem' }],     // 20px
-        '2xl': ['1.5rem', { lineHeight: '2rem' }],        // 24px
-        '3xl': ['1.875rem', { lineHeight: '2.25rem' }],   // 30px
-        '4xl': ['2.25rem', { lineHeight: '2.5rem' }],     // 36px
+        '2xs': ['0.6875rem', { lineHeight: '0.95rem' }], // ~10.5px
+        'xs': ['0.75rem', { lineHeight: '1.05rem' }],     // 12px
+        'sm': ['0.8125rem', { lineHeight: '1.2rem' }],   // 13px
+        'base': ['0.875rem', { lineHeight: '1.35rem' }],  // 14px (balanced medium)
+        'md': ['0.9375rem', { lineHeight: '1.45rem' }],   // 15px
+        'lg': ['1rem', { lineHeight: '1.5rem' }],        // 16px
+        'xl': ['1.125rem', { lineHeight: '1.65rem' }],    // 18px
+        '2xl': ['1.25rem', { lineHeight: '1.75rem' }],    // 20px
+        '3xl': ['1.5rem', { lineHeight: '2rem' }],        // 24px (balanced medium headline)
+        '4xl': ['1.75rem', { lineHeight: '2.25rem' }],    // 28px (balanced hero title)
       },
       animation: {
         'pulse-subtle': 'pulse 3s cubic-bezier(0.4, 0, 0.6, 1) infinite',

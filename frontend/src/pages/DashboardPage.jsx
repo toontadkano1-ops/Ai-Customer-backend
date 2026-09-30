@@ -99,7 +99,7 @@ export const DashboardPage = () => {
               </span>
             </div>
 
-            <h1 className="text-xl sm:text-2xl lg:text-3xl font-bold text-white tracking-tight font-display">
+            <h1 className="text-xl sm:text-2xl font-bold text-white tracking-tight">
               Welcome back, <span className="bg-gradient-to-r from-white via-violet-200 to-violet-400 bg-clip-text text-transparent">{user?.full_name || 'Team Member'}</span>!
             </h1>
             <p className="text-xs sm:text-sm text-slate-300 mt-2 max-w-2xl leading-relaxed">
