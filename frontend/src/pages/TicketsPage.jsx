@@ -184,9 +184,9 @@ export const TicketsPage = () => {
   return (
     <div className="space-y-6 animate-fade-in">
       {/* Top Header */}
-      <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4 pb-2 border-b border-slate-800">
+      <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4 pb-2 border-b border-[#1C2242]">
         <div>
-          <h1 className="text-2xl font-bold tracking-tight text-white flex items-center gap-2">
+          <h1 className="text-2xl font-bold tracking-tight text-white flex items-center gap-2 font-display">
             Support Ticket Management
           </h1>
           <p className="text-xs text-slate-400 mt-1">
@@ -201,49 +201,49 @@ export const TicketsPage = () => {
 
       {/* Ticket Metrics Badges */}
       <div className="grid grid-cols-2 sm:grid-cols-4 gap-3">
-        <div className="p-3.5 rounded-xl border border-slate-800 bg-slate-900/60 flex items-center justify-between">
+        <div className="p-3.5 rounded-2xl border border-[#1C2242] bg-[#0D0F22]/90 flex items-center justify-between shadow-lg shadow-black/30">
           <div>
-            <p className="text-xs text-slate-400">Open Tickets</p>
+            <p className="text-xs text-slate-400 font-semibold">Open Tickets</p>
             <p className="text-xl font-bold text-amber-400 font-mono mt-0.5">{openCount}</p>
           </div>
-          <span className="p-2 rounded-lg bg-amber-500/10 text-amber-400">
+          <span className="p-2 rounded-xl bg-amber-500/10 text-amber-400 border border-amber-500/20">
             <Clock className="w-4 h-4" />
           </span>
         </div>
 
-        <div className="p-3.5 rounded-xl border border-slate-800 bg-slate-900/60 flex items-center justify-between">
+        <div className="p-3.5 rounded-2xl border border-[#1C2242] bg-[#0D0F22]/90 flex items-center justify-between shadow-lg shadow-black/30">
           <div>
-            <p className="text-xs text-slate-400">In Progress</p>
-            <p className="text-xl font-bold text-brand-400 font-mono mt-0.5">{inProgressCount}</p>
+            <p className="text-xs text-slate-400 font-semibold">In Progress</p>
+            <p className="text-xl font-bold text-violet-400 font-mono mt-0.5">{inProgressCount}</p>
           </div>
-          <span className="p-2 rounded-lg bg-brand-500/10 text-brand-400">
+          <span className="p-2 rounded-xl bg-violet-500/10 text-violet-400 border border-violet-500/20">
             <RotateCcw className="w-4 h-4" />
           </span>
         </div>
 
-        <div className="p-3.5 rounded-xl border border-slate-800 bg-slate-900/60 flex items-center justify-between">
+        <div className="p-3.5 rounded-2xl border border-[#1C2242] bg-[#0D0F22]/90 flex items-center justify-between shadow-lg shadow-black/30">
           <div>
-            <p className="text-xs text-slate-400">High / Urgent</p>
+            <p className="text-xs text-slate-400 font-semibold">High / Urgent</p>
             <p className="text-xl font-bold text-rose-400 font-mono mt-0.5">{urgentCount}</p>
           </div>
-          <span className="p-2 rounded-lg bg-rose-500/10 text-rose-400">
+          <span className="p-2 rounded-xl bg-rose-500/10 text-rose-400 border border-rose-500/20">
             <AlertCircle className="w-4 h-4" />
           </span>
         </div>
 
-        <div className="p-3.5 rounded-xl border border-slate-800 bg-slate-900/60 flex items-center justify-between">
+        <div className="p-3.5 rounded-2xl border border-[#1C2242] bg-[#0D0F22]/90 flex items-center justify-between shadow-lg shadow-black/30">
           <div>
-            <p className="text-xs text-slate-400">Resolved</p>
+            <p className="text-xs text-slate-400 font-semibold">Resolved</p>
             <p className="text-xl font-bold text-emerald-400 font-mono mt-0.5">{resolvedCount}</p>
           </div>
-          <span className="p-2 rounded-lg bg-emerald-500/10 text-emerald-400">
+          <span className="p-2 rounded-xl bg-emerald-500/10 text-emerald-400 border border-emerald-500/20">
             <CheckCircle2 className="w-4 h-4" />
           </span>
         </div>
       </div>
 
       {/* Filter and Search Bar */}
-      <div className="flex flex-wrap items-center justify-between gap-3 p-3 bg-slate-900/60 border border-slate-800 rounded-xl backdrop-blur-md">
+      <div className="flex flex-wrap items-center justify-between gap-3 p-3 bg-[#0D0F22]/90 border border-[#1C2242] rounded-2xl backdrop-blur-xl shadow-lg">
         <div className="relative flex-1 min-w-[240px]">
           <Search className="absolute left-3 top-1/2 -translate-y-1/2 w-4 h-4 text-slate-400" />
           <input
@@ -251,7 +251,7 @@ export const TicketsPage = () => {
             value={search}
             onChange={(e) => setSearch(e.target.value)}
             placeholder="Search tickets by subject, customer, or ID..."
-            className="w-full bg-slate-950 border border-slate-800 rounded-lg pl-9 pr-4 py-1.5 text-xs text-slate-200 placeholder-slate-500 focus:outline-none focus:border-brand-500"
+            className="w-full bg-[#070814] border border-[#1C2242] rounded-xl pl-9 pr-4 py-2 text-xs sm:text-sm text-slate-200 placeholder-slate-500 focus:outline-none focus:border-violet-500 transition-colors"
           />
         </div>
 

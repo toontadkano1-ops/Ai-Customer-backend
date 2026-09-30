@@ -148,9 +148,9 @@ export const ConversationsPage = () => {
   return (
     <div className="space-y-6 animate-fade-in">
       {/* Top Header with KPI highlights */}
-      <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4 pb-2 border-b border-slate-800">
+      <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4 pb-2 border-b border-[#1C2242]">
         <div>
-          <h1 className="text-2xl font-bold tracking-tight text-white flex items-center gap-2">
+          <h1 className="text-2xl font-bold tracking-tight text-white flex items-center gap-2 font-display">
             Customer Interaction Hub
           </h1>
           <p className="text-xs text-slate-400 mt-1">
@@ -159,7 +159,7 @@ export const ConversationsPage = () => {
         </div>
 
         <div className="flex items-center gap-3">
-          <Badge variant="primary" size="md">
+          <Badge variant="purple" size="md">
             {activeCount} Active Sessions
           </Badge>
           {escalatedCount > 0 && (
@@ -176,9 +176,9 @@ export const ConversationsPage = () => {
       {/* Main 2-Column Interface */}
       <div className="grid grid-cols-1 lg:grid-cols-3 gap-6 h-[calc(100vh-14rem)]">
         {/* Left Column: Conversation Sessions List with Filters */}
-        <div className="rounded-2xl border border-slate-800 bg-slate-900/60 backdrop-blur-md overflow-hidden flex flex-col">
+        <div className="rounded-2xl border border-[#1C2242] bg-[#0D0F22]/90 backdrop-blur-xl overflow-hidden flex flex-col shadow-xl">
           {/* Search & Filter Header */}
-          <div className="p-3 border-b border-slate-800 bg-slate-900/80 space-y-2.5">
+          <div className="p-3 border-b border-[#1C2242] bg-[#0A0C1B]/90 space-y-2.5">
             <div className="relative">
               <Search className="absolute left-3 top-1/2 -translate-y-1/2 w-3.5 h-3.5 text-slate-400" />
               <input
@@ -186,7 +186,7 @@ export const ConversationsPage = () => {
                 value={search}
                 onChange={(e) => setSearch(e.target.value)}
                 placeholder="Search by customer, text, or ID..."
-                className="w-full bg-slate-950 border border-slate-800 rounded-lg pl-8 pr-3 py-1.5 text-xs text-slate-200 placeholder-slate-500 focus:outline-none focus:border-brand-500"
+                className="w-full bg-[#070814] border border-[#1C2242] rounded-lg pl-8 pr-3 py-1.5 text-xs text-slate-200 placeholder-slate-500 focus:outline-none focus:border-violet-500 transition-colors"
               />
             </div>
 
@@ -199,8 +199,8 @@ export const ConversationsPage = () => {
                     onClick={() => setStatusFilter(st)}
                     className={`px-2.5 py-1 rounded-lg capitalize font-semibold transition-colors ${
                       statusFilter === st
-                        ? 'bg-brand-600 text-white'
-                        : 'text-slate-300 hover:text-white bg-slate-800/80'
+                        ? 'bg-gradient-to-r from-violet-600 to-indigo-600 text-white shadow-md shadow-violet-950/50'
+                        : 'text-slate-300 hover:text-white bg-[#141836]'
                     }`}
                   >
                     {st}
@@ -211,7 +211,7 @@ export const ConversationsPage = () => {
               <select
                 value={sentimentFilter}
                 onChange={(e) => setSentimentFilter(e.target.value)}
-                className="bg-slate-950 border border-slate-800 rounded-lg px-2.5 py-1 text-xs sm:text-sm text-slate-200 focus:outline-none font-medium"
+                className="bg-[#070814] border border-[#1C2242] rounded-lg px-2.5 py-1 text-xs sm:text-sm text-slate-200 focus:outline-none font-medium"
               >
                 <option value="all">All Sentiment</option>
                 <option value="positive">Positive</option>
