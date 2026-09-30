@@ -1,0 +1,12 @@
+{
+  "name": "cx-intelligence-root",
+  "version": "1.0.0",
+  "description": "CX Intelligence - Full-Stack AI-Powered Customer Experience Platform",
+  "private": true,
+  "scripts": {
+    "dev:backend": "cd backend && npm run dev",
+    "dev:frontend": "cd frontend && npm run dev",
+    "build": "cd frontend && npm run build",
+    "test": "cd backend && npm test"
+  }
+}
