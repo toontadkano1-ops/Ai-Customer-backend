@@ -6,7 +6,7 @@
   "scripts": {
     "dev:backend": "cd backend && npm run dev",
     "dev:frontend": "cd frontend && npm run dev",
-    "build": "cd frontend && npm install && npm run build",
+    "build": "cd frontend && npm install && npm run build && node -e \"const fs = require('fs'); fs.cpSync('frontend/dist', 'dist', {recursive: true});\"",
     "test": "cd backend && npm test"
   }
 }
