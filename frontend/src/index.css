@@ -42,13 +42,6 @@
   }
 }
 
-/* Ensure comfortable readability */
-[class*="text-\[9px\]"],
-[class*="text-\[10px\]"],
-[class*="text-\[11px\]"] {
-  font-size: 0.875rem !important;
-  line-height: 1.35rem !important;
-}
 
 /* Cyber Subtle Dot Grid Background */
 .bg-cyber-grid {

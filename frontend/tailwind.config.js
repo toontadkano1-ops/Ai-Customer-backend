@@ -35,15 +35,15 @@ export default {
         mono: ['"JetBrains Mono"', 'monospace'],
       },
       fontSize: {
-        '2xs': ['0.8125rem', { lineHeight: '1.2rem' }],   // ~13px
-        'xs': ['0.9375rem', { lineHeight: '1.4rem' }],     // 15px (comfortable medium-compact)
-        'sm': ['1.025rem', { lineHeight: '1.55rem' }],     // ~16.4px (standard readable body)
-        'base': ['1.125rem', { lineHeight: '1.75rem' }],   // 18px (prominent body)
-        'lg': ['1.25rem', { lineHeight: '1.85rem' }],      // 20px
-        'xl': ['1.45rem', { lineHeight: '2.05rem' }],      // 23px
-        '2xl': ['1.75rem', { lineHeight: '2.3rem' }],      // 28px
-        '3xl': ['2.25rem', { lineHeight: '2.65rem' }],     // 36px
-        '4xl': ['2.75rem', { lineHeight: '3.15rem' }],     // 44px
+        '2xs': ['0.6875rem', { lineHeight: '0.95rem' }], // 11px
+        'xs': ['0.75rem', { lineHeight: '1rem' }],        // 12px
+        'sm': ['0.875rem', { lineHeight: '1.25rem' }],    // 14px
+        'base': ['0.9375rem', { lineHeight: '1.4rem' }],   // 15px
+        'lg': ['1.0625rem', { lineHeight: '1.55rem' }],   // 17px
+        'xl': ['1.25rem', { lineHeight: '1.75rem' }],     // 20px
+        '2xl': ['1.5rem', { lineHeight: '2rem' }],        // 24px
+        '3xl': ['1.875rem', { lineHeight: '2.25rem' }],   // 30px
+        '4xl': ['2.25rem', { lineHeight: '2.5rem' }],     // 36px
       },
       animation: {
         'pulse-subtle': 'pulse 3s cubic-bezier(0.4, 0, 0.6, 1) infinite',
